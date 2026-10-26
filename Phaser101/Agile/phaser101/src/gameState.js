@@ -35,6 +35,8 @@ class gameState extends Phaser.Scene
         this.key_down = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.DOWN);
         */
        this.cursores = this.input.keyboard.createCursorKeys();
+       this.input.keyboard.on('keydown-SPACE', () => { this.scene.start('gameState2'); });
+       this.tecla2 = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.TWO);
     };
 
     loadAnimationRich()
@@ -54,6 +56,8 @@ class gameState extends Phaser.Scene
     {
         this.bg.tilePositionX += 2;
         //this.bird.angle += 1;
+
+        if (this.tecla2.isDown) { this.scene.start('gameState2'); }
 
         //if(this.key_right.isDown)
         if (this.cursores.right.isDown) { this.birdA.x += gamePrefs.heroSpeed; }
