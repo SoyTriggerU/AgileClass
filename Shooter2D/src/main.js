@@ -3,6 +3,7 @@ var gamePrefs =
     NAVE_SPEED: 2,
     BULLET_SPEED: -100,
     MAX_VIDAS: 4,
+    MAX_VIDAS_ENEMY: 2,
     ENEMY_SPEED: 20,
     ENEMY_BULLET_SPEED: 80,
 }
