@@ -1,4 +1,4 @@
-import { GAME_SIZE,PHYSICS,RENDER } from "./constants.js";
+import { GAME_SIZE,PHYSICS,RENDER, SCALE } from "./constants.js";
 
 /**
  * Define y devuelve el objeto de configuración con el que instanciaremos el motor de Phaser.
@@ -30,6 +30,11 @@ export function buildConfig ({scenes=[]} = {})
                 gravity: {y: PHYSICS.GRAVITY},
                 debug: PHYSICS.DEBUG
             }
+        },
+        scale:{
+            mode: Phaser.Scale[SCALE.MODE],
+            autoCenter: Phaser.Scale[SCALE.AUTO_CENTER],
+            zoom: SCALE.ZOOM,
         }
     };
 }

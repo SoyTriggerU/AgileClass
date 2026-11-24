@@ -14,10 +14,12 @@ export const HERO =
 {
     SPEED: 200,
     JUMP_FORCE: -450,
-    SPIN_SPEED: 360,
-    SLIDE_DECEL: 600,
-    PROJECTILE_SPEED: 520,
     MAX_LIVES: 7
+};
+
+export const ENEMY = 
+{
+    SPEED: 150,
 };
 
 export const LEVEL_SIZE = 
@@ -40,7 +42,7 @@ export const RENDER =
 
 export const SCALE = 
 {
-    MODE: 'FIT',
-    AUTO_CENTER: 'CENTER_BOTH',
-    ZOOM: 2
-}
+    MODE: 'FIT',                // Phaser.Scale.FIT (responsive)
+    AUTO_CENTER: 'CENTER_BOTH', // Phaser.Scale.CENTER_BOTH
+    ZOOM: 2                     //Para pixelart: escala lógica x2 sin deformar
+};
